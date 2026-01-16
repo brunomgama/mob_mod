@@ -18,15 +18,7 @@ export default function AuthLayout() {
   }, [isSignedIn, isLoaded, segments]);
 
   return (
-    <Stack 
-      screenOptions={{ 
-        headerShown: false,
-        animation: 'fade_from_bottom',
-        animationDuration: 300,
-        gestureEnabled: true,
-        gestureDirection: 'horizontal',
-      }}
-    >
+    <Stack screenOptions={{ headerShown: false, animation: 'fade_from_bottom', animationDuration: 300, gestureEnabled: true, gestureDirection: 'horizontal'}}>
       <Stack.Screen name="sign-in" />
       <Stack.Screen name="sign-up" />
     </Stack>

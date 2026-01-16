@@ -8,16 +8,16 @@ export default function TabLayout() {
   const { isSignedIn, isLoaded } = useAuth();
   const router = useRouter();
   const segments = useSegments();
-
+  
   useEffect(() => {
     if (!isLoaded) return;
     const inAuthGroup = segments[0] === "(auth)";
-
+  
     if (!isSignedIn && !inAuthGroup) {
       router.replace("/(auth)/sign-in");
     }
   }, [isSignedIn, isLoaded, segments]);
-
+  
   if (!isLoaded || !isSignedIn) {
     return null;
   }
