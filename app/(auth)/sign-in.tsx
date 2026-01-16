@@ -1,3 +1,4 @@
+import GoogleSigin from '@/components/GoogleSigin'
 import { useSignIn } from '@clerk/clerk-expo'
 import { Ionicons } from '@expo/vector-icons'
 import { Link, useRouter } from 'expo-router'
@@ -71,6 +72,15 @@ export default function Page() {
               <Text className="text-blue-600 font-semibold">Sign up</Text>
             </Link>
           </View>
+
+          <View className='flex-row items-center my-4'>
+            <View className='flex-1 h-px bg-gray-200'/>
+            <Text className='px-4 text-gray-500 text-sm'>or</Text>
+            <View className='flex-1 h-px bg-gray-200'/>
+          </View>
+
+          <GoogleSigin/>
+
         </View>
 
         {/* FOOTER */}
